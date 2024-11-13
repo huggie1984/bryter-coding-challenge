@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-white;
+
+  @media (prefers-color-scheme: white) {
+    color-scheme: white;
+  }
+}
+
+@layer components {
+  .app-button {
+    @apply px-4 py-2 bg-cyan-700 rounded font-semibold self-start text-white hover:bg-cyan-600 whitespace-nowrap;
+  }
+  .app-button-disabled {
+    @apply px-4 py-2 bg-gray-300 rounded font-semibold self-start text-white whitespace-nowrap
+  }
+  .app-button-submit {
+    @apply px-4 py-2 bg-green-500 rounded font-semibold self-start text-white hover:bg-green-600 whitespace-nowrap
+  }
+  .app-button-warn {
+    @apply px-4 py-2 bg-amber-500 rounded font-semibold self-start text-white hover:bg-amber-600 whitespace-nowrap;
+  }
+}
